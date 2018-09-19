@@ -109,13 +109,13 @@ sortData(type){
 calculateHeight(){
 	let total = 0, feet;
 	this.state.selectedChar.map((val) => {
-		let value = parseInt(val.height)
-		if(typeof value == 'number'){
+		let value = parseInt(val.height == "unknown" ? 0 : val.height)
+		if(value){
 			total = value + total
 		}
 	});
 	feet = total * 0.0328084
-	return feet;
+	return feet.toFixed(2)+"Feets";
 }
 
   render() {
