@@ -1,0 +1,5 @@
+rootProject.name = 'StarWars'
+include ':@remobile_react-native-marquee-label'
+project(':@remobile_react-native-marquee-label').projectDir = new File(rootProject.projectDir, '../node_modules/@remobile/react-native-marquee-label/android')
+
+include ':app'
